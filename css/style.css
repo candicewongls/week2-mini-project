@@ -1,0 +1,142 @@
+
+
+#categoryGrid {
+    display: grid;
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly; 
+    column-gap: 10px;
+    row-gap: 15px;  
+    align-content: space-evenly; 
+    justify-content: stretch;  
+    grid-template-areas:
+    "row column grid"
+    "linear box overlay";
+  }
+
+  #headline {
+  text-align: center;
+  color: blueviolet;
+  width: 300px;
+  margin: 50px auto;
+  }
+
+  #subtitle {
+    text-align: center;
+    color: white;
+    width: 600px;
+    margin: 50px auto;
+
+  }
+
+  #row {
+    grid-area: row;
+    justify-content: stretch;
+    
+  }
+
+  #column {
+    grid-area: column;
+    justify-content: stretch;
+  }
+
+  #grid {
+    grid-area: grid;
+    justify-content: stretch;
+  }
+
+  #linear {
+    grid-area: linear;
+  }
+  
+  #box {
+    grid-area: box;
+  }
+
+  #linear {
+    grid-area: overlay;
+  }
+
+  .categoryGridArea {
+    border-style: dotted;
+    border-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 2s,;
+  }
+
+  .categoryGridArea:hover {
+    background-color: #fff;
+    color: #333;
+  }
+
+  .code {
+    background: linear-gradient(#e66465, #9198e5);
+    user-select: all;
+
+  }
+
+  .heading {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    top: -30px;
+    width: auto;
+    height: 40px;
+    border: 3px solid ;
+    margin-top: -20px;
+    border-color: aliceblue;
+    border-style: ridge;
+    background: grey;
+    z-index:1;
+  }
+
+ .subheading {
+  align-items: flex-start;
+  position: relative;
+  overflow: auto;
+  text-align: start;
+  display: inline;
+  flex: left;
+  float:inline-start;
+  border: auto;
+  padding: 20px;
+ }
+
+ pre {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+ }
+
+ @media only screen and (min-width: 768px) and (max-width: 992px) {
+  #categoryGrid {
+    grid-template-columns: auto auto;
+    column-gap:10px;
+    row-gap: 15px;  
+    align-content: space-evenly; 
+    justify-content: stretch; 
+    grid-template-areas: 
+    "row column"
+    "grid linear"
+    "box overlay" ;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #categoryGrid {
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    row-gap: 15px;  
+    align-content: space-evenly; 
+    justify-content: stretch; 
+    grid-template-areas: 
+    "row"
+     "column"
+    "grid"
+    "linear"
+    "box"
+    "overlay" ;
+  }
+}
+
+ 
